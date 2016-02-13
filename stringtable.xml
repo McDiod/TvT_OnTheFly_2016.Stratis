@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TvT_OnTheFly_project">
+    <Package name="TvT_OnTheFly_package">
+    	 <Container name="mission briefing">
+    	 	<Key ID="str_GRAD_story">
+                <Original>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</Original>
+                <English>The terrorists want to build a dirty bomb and successfully gained a barrel with radioactive material. Secret Service is on their track and have prepared the barrel with a GPS-Logger to find their hideout. Now German Forces are tasked to neutralize the threat.</English>
+                <German>Terroristen wollen eine schmutzige Bombe bauen und haben sich radioaktives Material beschafft. Der Geheimdienst ist ihnen aber auf der Spur und konnte das Behältnis mit einem GPS-Logger markieren, um ihren Unterschlupf ausfindig zu machen. Die Bundeswehr hat nun den Auftrag, die Gefahr zu neutralisieren.</German>
+            </Key>
+            <Key ID="str_GRAD_briefing">
+                <Original>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</Original>
+                <English>In this mission OPFOR and later BLUFOR can choose their spawn point. BLUFOR has to spawn in a certain radius around the objective. Both side can choose a vehicle which they can spawn once. Furthermore OPFOR can build fortifications (Boss + Doc). Mission setup is triggered by the leaders on scrollwheel-menu.</English>
+                <German>In dieser Mission wählen erst OPFOR, danach BLUFOR ihren beliebigen Startpunkt. BLUFOR hat einen Mindest-und einen Maximalabstand einzuhalten. Beide Seiten können jeweils ein Fahrzeug wählen, das sie einnmalig spawnen lassen. OPFOR kann ausserdem Stellungen errichten (Leader + Medic). Das Missions-Setup wird von den jeweiligen Leadern im Mausradmenü ausgeführt.</German>
+            </Key>
+        </Container>
+        <Container name="mission setup">
+            <Key ID="str_GRAD_spawn_on_water">
+                <Original>Spawn on water not possible</Original>
+                <English>Spawn on water not possible</English>
+                <German>Im Wasser spawnen unmöglich</German>
+            </Key>
+            <Key ID="str_GRAD_choose_spawn_location">
+                <Original>Choose Spawn Location</Original>
+                <English>Choose Spawn Location</English>
+                <German>Spawnpunkt wählen</German>
+				<French>Choisir le point de spawn</French>
+            </Key>
+            <Key ID="str_GRAD_choose_vehicle">
+                 <Original>Choose Upgrade</Original>
+                <English>Choose Upgrade</English>
+                <German>Upgrade wählen</German>
+				<French>Sélectionner un upgrade</French>
+            </Key>
+            <Key ID="str_GRAD_jip">
+            	<Original>Sorry, you joined too late. Spectate and enjoy!</Original>
+                <English>Sorry, you joined too late. Spectate and enjoy!</English>
+                <German>Du bist zu spät und musst zuschauen!</German>
+            </Key>
+            <Key ID="str_GRAD_spawnTooClose1">
+            	<Original>Sorry, Spawn too close </Original>
+                <English>Sorry, Spawn too close </English>
+                <German>Sorry, Spawnpunkt zu dicht </German>
+            </Key>
+             <Key ID="str_GRAD_spawnTooClose2">
+            	<Original>Must be at least</Original>
+                <English>Must be at least</English>
+                <German>Muss mindestens sein: </German>
+            </Key>
+            <Key ID="str_GRAD_spawnTooFar1">
+            	<Original>Sorry, Spawn too far away from objective</Original>
+                <English>Sorry, Spawn too far away from objective</English>
+                <German>Sorry, Spawnpunkt zu weit weg vom Ziel</German>
+            </Key>
+             <Key ID="str_GRAD_spawnTooFar2">
+            	<Original>Must be at max </Original>
+                <English>Must be at max </English>
+                <German>Darf höchstens sein: </German>
+            </Key>
+             <Key ID="str_GRAD_hint_bluforSpawned">
+                <Original>BLUFOR spawned. OPFOR may now spawn vehicle.</Original>
+                <English>BLUFOR spawned. OPFOR may now spawn vehicle. </English>
+                <German>BLUFOR ist gespawned. OPFOR kann jetzt Fahrzeug spawnen.</German>
+            </Key>
+             <Key ID="str_GRAD_hint_opforSpawned">
+                <Original>OPFOR spawned. BLUFOR may spawn now.</Original>
+                <English>OPFOR spawned. BLUFOR may spawn now. </English>
+                <German>OPFOR ist gespawned. BLUFOR kann jetzt spawnen.</German>
+            </Key>
+             <Key ID="str_GRAD_endPlacement">
+                <Original>End Placement</Original>
+                <English>End Placement</English>
+                <German>Keine Objekte mehr platzieren</German>
+            </Key>
+             <Key ID="str_GRAD_spawnHEMTT">
+                <Original>Spawn HEMTT</Original>
+                <English>Spawn HEMTT</English>
+                <German>Transport-LKW spawnen</German>
+            </Key>
+             <Key ID="str_GRAD_spawnLittlebird">
+                <Original>Spawn Littlebird</Original>
+                <English>Spawn Littlebird</English>
+                <German>Littlebird spawnen</German>
+            </Key>
+             <Key ID="str_GRAD_vehicleSpawned">
+                <Original>Vehicle spawned</Original>
+                <English>Vehicle spawned</English>
+                <German>Fahrzeug gespawned</German>
+            </Key>
+             <Key ID="str_GRAD_mortarSpawned">
+                <Original>Mortar spawned</Original>
+                <English>Mortar spawned</English>
+                <German>Mörser gespawned</German>
+            </Key>
+             <Key ID="str_GRAD_at4Spawned">
+                <Original>AT4 Crate spawned</Original>
+                <English>AT4 Crate spawned</English>
+                <German>AT4 Box gespawned</German>
+            </Key>
+        </Container>
+        <Container name="mission_end">
+            <Key ID="str_GRAD_winmsg">
+               <Original>Mission ends now</Original>
+                <English>Mission ends now</English>
+                <German>Mission wird beendet</German>
+				<French>Mission est fini</French>
+            </Key>
+             <Key ID="str_GRAD_winmsg_points">
+               <Original>OPFOR wins! All propaganda transmitted.</Original>
+                <English>OPFOR wins! All propaganda transmitted.</English>
+                <German>OPFOR gewinnt! Propaganda vollständig ausgestrahlt.</German>
+            </Key>
+            <Key ID="str_GRAD_thankyouforplaying_opfor">
+               <Original>OPFOR wins!</Original>
+                <English>OPFOR wins!</English>
+                <German>OPFOR gewinnt!</German>
+            </Key>
+             <Key ID="str_GRAD_thankyouforplaying_blufor">
+               <Original>BLUFOR wins!</Original>
+                <English>BLUFOR wins!</English>
+                <German>BLUFOR gewinnt!</German>
+            </Key>
+            <Key ID="str_GRAD_thankyouforplaying2">
+               <Original>Thank you for playing.</Original>
+                <English>Thank you for playing.</English>
+                <German>Danke fürs Spielen.</German>
+            </Key>
+            <Key ID="str_GRAD_thankyouforplaying3">
+               <Original>You will now be teleported to Debriefing.</Original>
+                <English>You will now be teleported to Debriefing.</English>
+                <German>Du wirst nun zum Debriefing teleportiert.</German>
+            </Key>
+            <Key ID="str_GRAD_declareFailedBlufor">
+               <Original>Declare Mission failed for BLUFOR</Original>
+                <English>Declare Mission failed for BLUFOR</English>
+                <German>Mission für BLUFOR aufgeben</German>
+            </Key>
+            <Key ID="str_GRAD_hint_playback_speed_hint">
+                <Original>Replay Speed: </Original>
+                <English>Replay Speed: </English>
+                <German>Replay Geschwindigkeit: </German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_started">
+                <Original>Replay started</Original>
+                <English>Replay started</English>
+                <German>Replay gestartet</German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_timestamp">
+                <Original>Ingame time: </Original>
+                <English>Ingame time: </English>
+                <German>Zeit im Spiel: </German>
+            </Key>
+             <Key ID="str_GRAD_hint_replay_finished">
+                <Original>Replay finished</Original>
+                <English>Replay finished</English>
+                <German>Replay beendet</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
