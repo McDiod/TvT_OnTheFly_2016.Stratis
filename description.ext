@@ -42,8 +42,8 @@ class Params
 	class BLUFORCE
 	{
 		title = "BLUFOR";
-		values[] = {"unitedstates"};
-		texts[] = {"US"};
+		values[] = {"unitedstates","german"};
+		texts[] = {"US","Germany"};
 		default = 1;
 	};
 
@@ -52,7 +52,7 @@ class Params
 		title = "OPFOR";
 		values[] = {"russian"};
 		texts[] = {"Russia"};
-		default = 2;
+		default = 0;
 	};
 
 	class AllowedSpawnDistanceMinimum
