@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={1797.9921,33.166409,5956.3843};
-		dir[]={-0.5872767,-0.44407171,0.67681026};
-		up[]={-0.29105979,0.89596742,0.33543181};
-		aside[]={0.7553637,8.6589716e-007,0.6554389};
+		dir[]={-0.67782503,-0.41324005,0.60823745};
+		up[]={-0.30759519,0.91059774,0.27601519};
+		aside[]={0.66792691,9.710202e-007,0.74434501};
 	};
 };
 binarizationWanted=0;
@@ -72,25 +72,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -122,6 +103,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
 				};
 			};
 		};
