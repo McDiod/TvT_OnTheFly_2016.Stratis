@@ -2,15 +2,17 @@ _unit = _this select 0;
 _faction_blufor = _this select 1;
 _faction_opfor = _this select 2;
 
-call compile preprocessFile "common\loadout\loadout_fillfunctions.sqf";
 
 _stringBlufor = "common\loadout\" + _faction_blufor + ".sqf";
 _stringOpfor = "common\loadout\" + _faction_opfor + ".sqf";
 
 diag_log format ["loadout: processing %1 & %2",_stringBlufor, _stringOpfor];
 
-call compile preprocessFile _stringBlufor;
-call compile preprocessFile _stringOpfor;
+call compile preprocessFileLineNumbers "common\loadout\loadout_fillfunctions.sqf";
+call compile preprocessFileLineNumbers _stringBlufor;
+call compile preprocessFileLineNumbers _stringOpfor;
+
+
 
 waitUntil { !isNull _unit };
 

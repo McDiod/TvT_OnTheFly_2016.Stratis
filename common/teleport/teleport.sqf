@@ -9,6 +9,6 @@ _spawn = [_location, [0,_distance], random 360, 0, [1,30], [100,typeOf _target]]
 
 playSound "beam";
 titleCut ["", "BLACK OUT", 1];
-_nul = _target setPos _spawn;
 sleep 1.2;
+_nul = _target setPos _spawn;
 titleCut ["", "BLACK IN", 1];

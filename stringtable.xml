@@ -26,10 +26,10 @@
 				<French>Choisir le point de spawn</French>
             </Key>
             <Key ID="str_GRAD_choose_vehicle">
-                 <Original>Choose Upgrade</Original>
-                <English>Choose Upgrade</English>
-                <German>Upgrade wählen</German>
-				<French>Sélectionner un upgrade</French>
+                 <Original>Choose 2 Vehicles</Original>
+                <English>Choose 2 Vehicles</English>
+                <German>2 Fahrzeugen wählen</German>
+				<French>Sélectionner 2 vehicles</French>
             </Key>
             <Key ID="str_GRAD_jip">
             	<Original>Sorry, you joined too late. Spectate and enjoy!</Original>
@@ -50,6 +50,11 @@
             	<Original>Sorry, Spawn too far away from objective</Original>
                 <English>Sorry, Spawn too far away from objective</English>
                 <German>Sorry, Spawnpunkt zu weit weg vom Ziel</German>
+            </Key>
+            <Key ID="str_GRAD_no_spawn_found">
+                <Original>Sorry, no fitting spawn pos found. Please try again.</Original>
+                <English>Sorry, no fitting spawn pos found. Please try again.</English>
+                <German>Sorry, keine passende Position gefunden. Bitte neu versuchen.</German>
             </Key>
              <Key ID="str_GRAD_spawnTooFar2">
             	<Original>Must be at max </Original>

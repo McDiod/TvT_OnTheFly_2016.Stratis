@@ -50,13 +50,13 @@ teleportGroup = {
 			hintSilent format [localize "str_GRAD_spawnTooClose1" + '(%1 m).' + 
 				localize "str_GRAD_spawnTooClose2" + ' %2.', 
 				floor(_distance), MINIMAL_BLUFOR_SPAWN_DISTANCE];
-			player execVM "common\teleport\teleport.sqf";};
+			[] execVM "common\teleport\selectSpawn.sqf";};
 
 		if (_distance > MAXIMAL_BLUFOR_SPAWN_DISTANCE) exitWith {
 			hintSilent format [localize "str_GRAD_spawnTooFar1" + '(%1 m).' + 
 			localize "str_GRAD_spawnTooFar2" + ' %2.', 
 			floor(_distance), MAXIMAL_BLUFOR_SPAWN_DISTANCE];
-		player execVM "common\teleport\teleport.sqf";
+		[] execVM "common\teleport\selectSpawn.sqf";
 		};
 
 

@@ -45,7 +45,7 @@ if (isClass(configFile >> (_this select 0) >> task_force_radio)) then {
 
 // global options
 did_replay = false;
-
+loadout_processed = true;
 
 if (!isMultiplayer) then {
 	{_x disableAI "MOVE"} forEach allUnits;
@@ -159,6 +159,6 @@ if !(isDedicated) then {
 	[] call showIntro;
 	[] spawn {
 		sleep (random 3);
-		[player,BLUFORCE, OPFORCE] execVM "common\loadout\_client.sqf"; diag_log format ["setup: loadout %1 initiated",player];
+		[player, BLUFORCE, OPFORCE] execVM "common\loadout\_client.sqf"; diag_log format ["setup: loadout %1 initiated",player];
 	};
 };
