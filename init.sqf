@@ -7,7 +7,7 @@ call compile preprocessfile "common\SHK_pos\shk_pos_init.sqf";
 clearInventory = compile preprocessFile "common\loadout\clearInventory.sqf";
 spawnIt = compile preprocessFile "common\spawn\spawnVehicle.sqf";
 teleportIt = compile preprocessFile "common\teleport\teleport.sqf";
-showIntro = compile preprocessFile "player\showIntro.sqf";
+showIntro = compile preprocessFile "player\intro\showIntro.sqf";
 
 
 /* parameter from description.ext */
@@ -16,6 +16,17 @@ WEATHER_SETTING = paramsArray select 1;
 MBT_VS_AT = (paramsArray select 2) == 1;
 BLUFORCE = paramsArray select 3;
 OPFORCE = paramsArray select 4;
+
+switch {BLUFORCE} do {
+	case 0: {BLUFORCE = "german"};
+	case 1: {BLUFORCE = "unitedstates"};
+	default {BLUFORCE = "german"};
+};
+switch {OPFORCE} do {
+	case 0: {OPFORCE = "russian"};
+	default {OPFORCE = "russian"};
+};
+
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 6;
 TIME_ACCELERATION = paramsArray select 7;
@@ -75,6 +86,13 @@ if (isServer) then {
 	publicVariable "REPLAY_FINISHED";
 
 	REPLAY_SPEED = 0.02;
+
+	// loadouts for SP tests
+	if (!isMultiplayer) then {
+	 	[] spawn {
+	 		{if (!isPlayer _x) then {sleep 0.5; [_x, BLUFORCE, OPFORCE] execVM "common\loadout\_client.sqf"};} forEach allUnits;
+	 	};
+ 	};
 };
 
 [3] execVM "common\GRAD_replay\GRAD_replay_init.sqf";
@@ -102,8 +120,8 @@ if ((isServer) || (isDedicated)) then {
 	[] execVM "server\tfar\tfarsettings.sqf";
 
 	[] execVM "server\objectives\detect_all_dead.sqf";
-	[] execVM "common\loadout\loadouts_blufor.sqf";
- 	[] execVM "common\loadout\loadouts_opfor.sqf";
+	/* [] execVM "common\loadout\loadouts_blufor.sqf";
+ 	[] execVM "common\loadout\loadouts_opfor.sqf";*/
  	
 
  	respawn_helper = "Land_MetalBarrel_F" createVehicle (getPos opfor_teamlead);
@@ -129,8 +147,8 @@ if !(isDedicated) then {
 
 	
 
-	[] execVM "player\adjustInitialSpawnPosition.sqf";
-	[] execVM "player\helpBriefing.sqf";
+	[] execVM "player\intro\adjustInitialSpawnPosition.sqf";
+	[] execVM "player\intro\helpBriefing.sqf";
 
 	if (BLUFOR_TELEPORTED && didJIP) then {
 		player setDamage 1;
