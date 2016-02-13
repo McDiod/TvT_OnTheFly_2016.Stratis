@@ -1,3 +1,5 @@
+// loadout_russian
+
 set_akm_ammo = {
 	this = _this select 0;
 	[this, "rhs_30Rnd_762x39mm", 5] call addMagazinesToVest; // 5 (1 in der waffe)

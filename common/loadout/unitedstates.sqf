@@ -1,3 +1,5 @@
+// loadout united states
+
 blufor_uniform_d = "rhs_uniform_cu_ocp";
 blufor_uniform_w = "rhs_uniform_FROG01_wd";
 

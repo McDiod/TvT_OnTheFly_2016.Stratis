@@ -1,8 +1,14 @@
 _unit = _this select 0;
+_faction_blufor = _this select 1;
+_faction_opfor = _this select 2;
 
 call compile preprocessFile "common\loadout\loadout_fillfunctions.sqf";
-call compile preprocessFile "common\loadout\loadouts_opfor.sqf";
-call compile preprocessFile "common\loadout\loadouts_blufor.sqf";
+
+_stringBlufor = "common\loadout\" + _faction_blufor + ".sqf";
+_stringOpfor = "common\loadout\" + _faction_opfor + ".sqf";
+
+call compile preprocessFile _stringBlufor;
+call compile preprocessFile _stringOpfor;
 
 waitUntil { !isNull _unit };
 

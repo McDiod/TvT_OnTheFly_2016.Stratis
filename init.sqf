@@ -19,9 +19,8 @@ OPFORCE = paramsArray select 4;
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
 MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 6;
 TIME_ACCELERATION = paramsArray select 7;
-IS_VANILLA = (paramsArray select 8) == 1;
-AR3PLAY_ENABLE_REPLAY = (paramsArray select 9) == 1;
-AR3PLAY_IS_STREAMABLE = (paramsArray select 10) == 1;
+AR3PLAY_ENABLE_REPLAY = (paramsArray select 8) == 1;
+AR3PLAY_IS_STREAMABLE = (paramsArray select 9) == 1;
 
 /* set date + time */
 if (isServer) then { setDate [2015, 2, 2, TIME_OF_DAY, 1]; };
@@ -142,6 +141,6 @@ if !(isDedicated) then {
 	[] call showIntro;
 	[] spawn {
 		sleep (random 3);
-		[player] execVM "common\loadout\_client.sqf"; diag_log format ["setup: loadout %1 initiated",player];
+		[player,BLUFORCE, OPFORCE] execVM "common\loadout\_client.sqf"; diag_log format ["setup: loadout %1 initiated",player];
 	};
 };

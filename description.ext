@@ -42,16 +42,16 @@ class Params
 	class BLUFORCE
 	{
 		title = "BLUFOR";
-		values[] = {0,1,2,3,4};
-		texts[] = {"BW Fleck","BW Tropen","US UCP","US OCP","BW 1945"};
+		values[] = {"unitedstates"};
+		texts[] = {"US"};
 		default = 1;
 	};
 
 	class OPFORCE
 	{
 		title = "OPFOR";
-		values[] = {0,1,2,3,4,5};
-		texts[] = {"Taliban/Afghan Militia","Iraqi Terrorists","Eastern Rebels/Nationalists","Russians","African Pirates","Russians 1945"};
+		values[] = {"russian"};
+		texts[] = {"Russia"};
 		default = 2;
 	};
 
@@ -77,14 +77,6 @@ class Params
 		values[] = {1,2,4,8,12};
 		texts[] = {"normal","2h in 1h","4h in 1h","8h in 1h","12h in 1h"};
 		default = 4;
-	};
-
-	class isVanilla
-	{
-		title = "Play without Gruppe Adler Modset";
-		values[] = {true, false};
-		texts[] = {"YES","NO"};
-		default = false;
 	};
 
 	class EnableReplay
