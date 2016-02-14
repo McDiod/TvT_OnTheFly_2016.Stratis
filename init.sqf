@@ -17,14 +17,17 @@ MBT_VS_AT = (paramsArray select 2) == 1;
 BLUFORCE = paramsArray select 3;
 OPFORCE = paramsArray select 4;
 
-switch {BLUFORCE} do {
-	case 0: {BLUFORCE = "german"};
-	case 1: {BLUFORCE = "unitedstates"};
-	default {BLUFORCE = "german"};
+diag_log format ["BLUFORCE is %1, OPFORCE is %2", BLUFORCE, OPFORCE];
+
+switch (BLUFORCE) do {
+	case 0: {BLUFORCE = "german";};
+	case 1: {BLUFORCE = "unitedstates";};
+	default {BLUFORCE =  "german";};
 };
-switch {OPFORCE} do {
-	case 0: {OPFORCE = "russian"};
-	default {OPFORCE = "russian"};
+switch (OPFORCE) do {
+	case 0: {OPFORCE = "russian";};
+	case 1: {OPFORCE = "nationalists";};
+	default {OPFORCE = "russian";};
 };
 
 MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
@@ -120,25 +123,11 @@ if ((isServer) || (isDedicated)) then {
 	[] execVM "server\tfar\tfarsettings.sqf";
 
 	[] execVM "server\objectives\detect_all_dead.sqf";
-	/* [] execVM "common\loadout\loadouts_blufor.sqf";
- 	[] execVM "common\loadout\loadouts_opfor.sqf";*/
  	
 
  	respawn_helper = "Land_MetalBarrel_F" createVehicle (getPos opfor_teamlead);
 	[respawn_helper, true, [0,1,0], 180] call ace_dragging_fnc_setdraggable;
 	[respawn_helper] execVM "server\barrelcapture\barrelcapture.sqf";
-
-	switch (OPFORCE) do {
-		case 3: {
-			// WHEN RUSSIANS
-			
-
-		};
-		default {
-			
-		};
-
-	};
 
 };
 

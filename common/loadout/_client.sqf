@@ -83,6 +83,7 @@ waitUntil { !isNull _unit };
             case "O_soldier_exp_F": {[_unit] call opfor_marksman;};
             case "O_recon_exp_F": {[_unit] call opfor_marksman;};
             case "O_soldierU_exp_F": {[_unit] call opfor_marksman;};
+            case "O_soldier_M_F": {[_unit] call opfor_marksman;};
 
             case "O_G_Soldier_AR_F": {[_unit] call opfor_MG;};
             case "O_Soldier_AR_F": {[_unit] call opfor_MG;};

@@ -50,9 +50,9 @@ class Params
 	class OPFORCE
 	{
 		title = "OPFOR";
-		values[] = {0};
-		texts[] = {"Russia"};
-		default = 0;
+		values[] = {0,1};
+		texts[] = {"Russia","Nationalists"};
+		default = 1;
 	};
 
 	class AllowedSpawnDistanceMinimum
