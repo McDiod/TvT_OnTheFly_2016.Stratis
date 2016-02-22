@@ -8,6 +8,9 @@ disabledAI = 0; //1
 enableDebugConsole = 1;
 loadScreen = "pic\loading.jpg";
 
+/* Plank */
+#include "plank\plank.h"
+
 
 respawn = 3;
 respawnDelay = 99999999;

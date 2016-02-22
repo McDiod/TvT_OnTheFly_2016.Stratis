@@ -9,6 +9,8 @@ spawnIt = compile preprocessFile "common\spawn\spawnVehicle.sqf";
 teleportIt = compile preprocessFile "common\teleport\teleport.sqf";
 showIntro = compile preprocessFile "player\intro\showIntro.sqf";
 
+/* plank */
+call compile preprocessFileLineNumbers "plank\plank_init.sqf";				
 
 /* parameter from description.ext */
 TIME_OF_DAY = paramsArray select 0;
