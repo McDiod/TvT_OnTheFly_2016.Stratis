@@ -113,6 +113,8 @@ blufor_teleport = blufor_teamlead addAction["<t color='#93E352'>" + localize "st
 
 
 
+
+
 /*                            */
 /* all kinds of optimizations */
 /*                            */
@@ -140,7 +142,24 @@ if ((isServer) || (isDedicated)) then {
 
 if !(isDedicated) then {
 
-	
+	if (str player == "opfor_engi") then
+	{
+	[opfor_engi] execVM "mission_setup\callPlank.sqf";
+	};
+
+
+
+	if (str player == "opfor_engi2") then
+	{
+	[opfor_engi2] execVM "mission_setup\callPlank.sqf";
+	};
+
+
+
+	if (str player == "opfor_engi3") then
+	{
+	[opfor_engi3] execVM "mission_setup\callPlank.sqf";
+	};
 
 	[] execVM "player\intro\adjustInitialSpawnPosition.sqf";
 	[] execVM "player\intro\helpBriefing.sqf";

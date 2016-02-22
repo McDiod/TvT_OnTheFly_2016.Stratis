@@ -146,7 +146,7 @@ opfor_sql = {
 	
 
 	this addWeapon "Binocular";
-	this addWeapon "rhs_weap_akm_gp25";
+	this addWeapon "rhs_weap_ak74m_gp25";
 	this addWeapon "hgun_Rook40_F";
 	
 

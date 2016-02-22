@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1932.3391,30.5,5752.6821};
-		dir[]={-0.047615986,-0.24931189,0.96726179};
-		up[]={-0.012258163,0.96841973,0.24901903};
-		aside[]={0.99879879,1.1983866e-007,0.049168155};
+		pos[]={1788.7158,10.677454,6018.6826};
+		dir[]={0.0097757559,-0.61021203,0.79219705};
+		up[]={0.0075298548,0.79223126,0.61017168};
+		aside[]={0.99993867,1.9941399e-007,-0.012340131};
 	};
 };
 binarizationWanted=0;
@@ -72,25 +72,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -122,6 +103,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
 				};
 			};
 		};
@@ -2000,13 +2000,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1786.6163,5.5014391,5999.3086};
+						position[]={1786.616,5.5014391,5999.3086};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
 					class Attributes
 					{
 						rank="SERGEANT";
+						name="opfor_engi";
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2691,13 +2692,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1791.1866,5.5014391,6012.5078};
+						position[]={1791.187,5.5014391,6012.5078};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
 					class Attributes
 					{
 						rank="SERGEANT";
+						name="opfor_engi2";
 						description="Engineer";
 						isPlayable=1;
 					};
@@ -2956,13 +2958,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1787.7655,5.5014391,6027.7534};
+						position[]={1787.766,5.5014391,6027.7539};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
 					class Attributes
 					{
 						rank="SERGEANT";
+						name="opfor_engi3";
 						description="Engineer";
 						isPlayable=1;
 					};
