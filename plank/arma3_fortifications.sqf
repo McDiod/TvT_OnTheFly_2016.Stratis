@@ -16,14 +16,14 @@ plank_deploy_fortData = [
 // Action text                      |  Classname                            |  Distance     |  Direction     |  Direction Range  |  Code
 //--------------------------------------------------------------------------------------------------------------------------------------
 ["Dirt-Trench",                        	"Fort_EnvelopeSmall",            	    3,              0,                  360,            {}],
-["Foliage",                             "Oleander1",                            3,              0,                  360,            {}],
-["Wide Sandbag fence",                  "Land_BagFence_Long_F",                 3,              0,                  360,            {}],
+["Foliage",                             "01_bushes_01_b_canina2s_summer",       3,              0,                  360,            {}],
+["Wide Sandbag fence",                  "land_Objects68",                       3,              0,                  360,            {}],
 ["H-Barrier watch tower",               "Land_HBarrierTower_F",                 15,             0,                  360,            {}],
 ["Short Sandbag fence",                 "Land_BagFence_Short_F",                3,              0,                  360,            {}],
 ["Razor Wire",                          "Land_Razorwire_F",                     6,              0,                  360,            {}],
 ["Concrete wall long",                  "Land_CncWall4_F",                      8,              0,                  360,            {}],
 ["Bunker Tower",                        "Land_BagBunker_Tower_F",               10,             0,                  360,            {}],
 ["Tanktrap",							"Hedgehog",							   	3,				180,				360,			{}],
-["Small Bunker",                       	"Land_fortified_nest_small", 			4, 			    180, 				360, 			{}],
+["Small Bunker",                       	"land_Objects11", 		             	4, 			    180, 				360, 			{}],
 ["Sandbag Bunker",						"Land_BagBunker_Small_F",				4,				180,				360,			{}]
 ];
