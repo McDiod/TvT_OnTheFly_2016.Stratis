@@ -1,7 +1,6 @@
 #include "\z\ace\addons\main\script_component.hpp"
 
 _action = _this select 0;
-_action = _this select 0;
 _position = _this select 1;
 _vehicle = _this select 2;
 _side = _this select 3;

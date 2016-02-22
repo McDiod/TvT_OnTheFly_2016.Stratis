@@ -31,14 +31,6 @@ class Params
 		default = 0;
     };
 
-	class MBTVSAT
-	{
-		title = "One of those vehicles for each side";
-		values[] = {0, 1};
-		texts[] = {"HEMTT, Littlebird / Transporter, Tactical, Mortar","same but +MBT / same but +At4 Launchers"};
-		default = 0;
-	};
-
 	class BLUFORCE
 	{
 		title = "BLUFOR";

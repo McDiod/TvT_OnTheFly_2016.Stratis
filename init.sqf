@@ -13,9 +13,8 @@ showIntro = compile preprocessFile "player\intro\showIntro.sqf";
 /* parameter from description.ext */
 TIME_OF_DAY = paramsArray select 0;
 WEATHER_SETTING = paramsArray select 1;
-MBT_VS_AT = (paramsArray select 2) == 1;
-BLUFORCE = paramsArray select 3;
-OPFORCE = paramsArray select 4;
+BLUFORCE = paramsArray select 2;
+OPFORCE = paramsArray select 3;
 
 diag_log format ["BLUFORCE is %1, OPFORCE is %2", BLUFORCE, OPFORCE];
 
@@ -30,11 +29,11 @@ switch (OPFORCE) do {
 	default {OPFORCE = "russian";};
 };
 
-MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
-MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 6;
-TIME_ACCELERATION = paramsArray select 7;
-AR3PLAY_ENABLE_REPLAY = (paramsArray select 8) == 1;
-AR3PLAY_IS_STREAMABLE = (paramsArray select 9) == 1;
+MINIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 4;
+MAXIMAL_BLUFOR_SPAWN_DISTANCE = paramsArray select 5;
+TIME_ACCELERATION = paramsArray select 6;
+AR3PLAY_ENABLE_REPLAY = (paramsArray select 7) == 1;
+AR3PLAY_IS_STREAMABLE = (paramsArray select 8) == 1;
 
 /* set date + time */
 if (isServer) then { setDate [2015, 2, 2, TIME_OF_DAY, 1]; };
@@ -85,6 +84,11 @@ if (isServer) then {
 	BLUFOR_AT_BARREL = false;
 	publicVariable "BLUFOR_AT_BARREL";
 
+	opfor_action_count = 0;
+	publicVariable "opfor_action_count";
+	blufor_action_count = 0;
+	publicVariable "blufor_action_count";
+
 	REPLAY_FINISHED = false;
 	publicVariable "REPLAY_FINISHED";
 
@@ -126,7 +130,7 @@ if ((isServer) || (isDedicated)) then {
  	
 
  	respawn_helper = "Land_MetalBarrel_F" createVehicle (getPos opfor_teamlead);
-	[respawn_helper, true, [0,1,0], 180] call ace_dragging_fnc_setdraggable;
+	[[respawn_helper, true, [0,1,0], 180], "ace_dragging_fnc_setdraggable", true, true] call BIS_fnc_MP;
 	[respawn_helper] execVM "server\barrelcapture\barrelcapture.sqf";
 
 };

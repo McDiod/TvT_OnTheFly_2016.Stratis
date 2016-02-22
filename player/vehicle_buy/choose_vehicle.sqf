@@ -29,28 +29,29 @@ vehicle_classname_KORD = "rhs_KORD_high_vdv";
 vehicle_classname_rubberboat = "B_Boat_Transport_01_F";
 
 
-opfor_action_count = 0;
-blufor_action_count = 0;
+
 
 raiseBluforCount = {
 	blufor_action_count = blufor_action_count + 1;	
+	publicVariable "blufor_action_count";
 };
 
 raiseOpforCount = {
 	opfor_action_count = opfor_action_count + 1;	
+	publicVariable "opfor_action_count";
 };
 
 if (player == opfor_teamlead) then {
 	 player removeAction choose_vehicle_opfor; 
 	 
 	 createVehicleTactical = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Tactical",
-	 {[createVehicleTactical,vehicle_position,vehicle_classname_tactical,east,opfor_action_count,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
+	 {[createVehicleTactical,vehicle_position,vehicle_classname_tactical,east,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
 
 	 createVehicleMortar = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn Mortar",
-	 {[createVehicleMortar,vehicle_position,vehicle_classname_mortar,east,opfor_action_count,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
+	 {[createVehicleMortar,vehicle_position,vehicle_classname_mortar,east,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
 
 	 createVehicleKORD = opfor_teamlead addAction["<t color=""#93E352"">" + "Spawn KORD",
-	 {[createVehicleKORD,vehicle_position,vehicle_classname_KORD,east,opfor_action_count,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
+	 {[createVehicleKORD,vehicle_position,vehicle_classname_KORD,east,false] execVM "player\vehicle_buy\spawnVehicle.sqf"; }, _Args, 1, false, true, "","_this == _target && opfor_action_count < 2"];
 };
 
 if (player == blufor_teamlead) then {
