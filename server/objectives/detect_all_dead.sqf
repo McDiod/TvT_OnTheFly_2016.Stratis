@@ -1,13 +1,5 @@
 // win conditions, detected by server only
 
-moveEveryoneToWhiteboard = {
-    spectator_vehicle setVehicleLock "UNLOCKED";
-
-    _pos = getPos whiteboard;
-    [[[west, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-    [[[east, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-    [[[civilian, _pos, blufor], "mission_setup\teleportEffectEnd.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
-};
 
 [] spawn {
     while {true} do {
@@ -20,7 +12,7 @@ moveEveryoneToWhiteboard = {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONBLUFOR = true; publicVariable "WINCONDITIONBLUFOR";
             sleep 2;
-            [[[west], "objectives\endmission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+            [[[west], "player\outro\endMission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
             //call moveEveryoneToWhiteboard;
         };
 
@@ -28,9 +20,9 @@ moveEveryoneToWhiteboard = {
             MISSION_COMPLETED = true; publicVariable "MISSION_COMPLETED";
             WINCONDITIONOPFOR = true; publicVariable "WINCONDITIONOPFOR";
             sleep 2;
-            [[[east], "objectives\endmission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
+            [[[east], "player\outro\endMission.sqf"], "BIS_fnc_execVM", true, true] spawn BIS_fnc_MP;
             
-            //call moveEveryoneToWhiteboard;
+            
         };
     };
 };
