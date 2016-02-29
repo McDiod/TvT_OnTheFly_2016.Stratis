@@ -107,8 +107,22 @@ if (isServer) then {
 [3] execVM "common\GRAD_replay\GRAD_replay_init.sqf";
 
 
-opfor_teleport = opfor_teamlead addAction["<t color='#93E352'>" + localize "str_GRAD_choose_spawn_location",{[[[false], "common\teleport\selectSpawn.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !OPFOR_TELEPORTED"];
-blufor_teleport = blufor_teamlead addAction["<t color='#93E352'>" + localize "str_GRAD_choose_spawn_location",{[[[false], "common\teleport\selectSpawn.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","_this == _target && !BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
+[] spawn {
+	waitUntil {!isNull player};
+	waitUntil {player == player};
+
+	if (str player == "opfor_teamlead") then 
+	{
+		opfor_teleport = opfor_teamlead addAction["<t color='#93E352'>" + localize "str_GRAD_choose_spawn_location",{[[[false], "common\teleport\selectSpawn.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","!OPFOR_TELEPORTED"];
+	};
+	
+	if (str player == "blufor_teamlead") then
+	{
+		blufor_teleport = blufor_teamlead addAction["<t color='#93E352'>" + localize "str_GRAD_choose_spawn_location",{[[[false], "common\teleport\selectSpawn.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;  }, _Args, 1, false, true, "","!BLUFOR_TELEPORTED && OPFOR_TELEPORTED"];
+	};
+};
+
+
 
 
 

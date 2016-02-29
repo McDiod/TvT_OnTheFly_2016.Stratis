@@ -30,6 +30,7 @@ opfor_basic = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "ItemWatch";
+	this linkItem "ItemGPS";
 	this linkItem "tf_fadak";
 };
 
