@@ -9,5 +9,18 @@ if ((_this select 0) == blufor) then {
 };
 
 sleep 3;
-
-"END1" call BIS_fnc_endMission;
+if ((_this select 0) == blufor) then {
+if (WINCONDITIONLBUFOR) then {
+ "END1" call BIS_fnc_endMission;
+ } else {
+ ["epicFail",false,2] call BIS_fnc_endMission;
+ };
+};
+if ((_this select 0) == opfor) then {
+ if (WINCONDITIONOPFOR) then {
+ "END1" call BIS_fnc_endMission;
+ } else {
+ ["epicFail",false,2] call BIS_fnc_endMission;
+ };
+ 
+};
