@@ -10,4 +10,4 @@ if ((_this select 0) == blufor) then {
 
 sleep 3;
 
-END_MISSION_TRIGGERED = true; publicVariable "END_MISSION_TRIGGERED";
+"END1" call BIS_fnc_endMission;
