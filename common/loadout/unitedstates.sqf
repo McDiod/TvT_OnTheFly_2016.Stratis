@@ -74,6 +74,7 @@ blufor_basic = {
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "ItemWatch";
+	this linkItem "ItemGPS";
 	this linkItem "tf_anprc148jem";
 };
 
@@ -310,12 +311,9 @@ blufor_AT = {
 
 	this addWeapon "Binocular";
 	this addWeapon (blufor_random_primaryweapon call BIS_fnc_selectRandom);
-	this addWeapon "rhs_weap_smaw";
-	for "_i" from 1 to 7 do {this addItemToBackpack "rhs_mag_smaw_SR";};
-	this addItemToBackpack "rhs_mag_smaw_HEAA";
-	this addItemToBackpack "rhs_mag_smaw_HEAA";
+	this addWeapon "rhs_weap_M136";
 
-	
+
 	[this] call blufor_basic;
 
 };
