@@ -140,6 +140,7 @@ blufor_default = {
 	this addWeapon (blufor_random_primaryweapon call BIS_fnc_selectRandom);
 	this addPrimaryWeaponItem "optic_Aco";
 
+
 	[this] call blufor_basic;
 };
 
@@ -188,7 +189,6 @@ blufor_sql = {
 	this addWeapon "SMA_HK416GL";
 	this addPrimaryWeaponItem "optic_Aco";
 	this addPrimaryWeaponItem "acc_flashlight";
-	this linkItem "ItemGPS";
 	this linkItem "ItemMap";
 
 	[this] call blufor_basic;
