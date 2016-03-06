@@ -44,7 +44,7 @@ _createdVehicle = _vehicle createVehicle _spawnPos;
 [_createdVehicle] call clearInventory;
 
 
-// if (_side == west) then {[] call raiseBluforCount;} else {[] call raiseOpforCount;};
+if (_side == west) then {[] call raiseBluforCount;} else {[] call raiseOpforCount;};
 
 [[[_spawnPos,_side],"player\vehicle_buy\createVehiclePositionMarker.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 

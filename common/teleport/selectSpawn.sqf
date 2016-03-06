@@ -39,8 +39,7 @@ teleportGroup = {
 
 	if (player == blufor_teamlead && OPFOR_TELEPORTED) then {
 		openMap [false,false];
-		BLUFOR_TELEPORTED = TRUE;
-		publicVariable "BLUFOR_TELEPORTED";
+		
 
 		// entfernung marker zu spawnpunkt zu klein oder groß?
 		// pos ist hier ein anderes pos als oben!
@@ -59,7 +58,8 @@ teleportGroup = {
 		[] execVM "common\teleport\selectSpawn.sqf";
 		};
 
-
+		BLUFOR_TELEPORTED = TRUE;
+		publicVariable "BLUFOR_TELEPORTED";
 
 		// teleport und gucken, ob posi frei ist
 		[[[west,spawnpoint_mapclick],"player\teleport\teleportAllOfSide.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;

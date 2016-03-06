@@ -18,6 +18,7 @@ islands=(
 	Sara_dbe1
 	Shapur_BAF
 	Stratis
+	SugarLake
 	Thirsk
 	Woodland_ACR
 	Zargabad
